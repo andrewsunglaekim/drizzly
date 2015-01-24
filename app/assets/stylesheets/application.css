@@ -15,6 +15,8 @@
  */
 
 body {
+	height: 100%;
+	font-family: Verdana, Geneva, sans-serif;
 	width: 70%;
 	margin: auto;
 	background-image: url("https://ununsplash.imgix.net/reserve/D9xlw7UxTBqQw5sLf8cJ_reef%20insp-72.jpg?fit=crop&fm=jpg&h=700&q=75&w=1050");
@@ -23,8 +25,35 @@ body {
 	background-size: cover;
 }
 
+.rain{
+
+}
+
+.drop {
+  background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgba(255,255,255,1) ), to(rgba(0,0,0,0.6))  );
+	width:3px;
+	height:75px;
+	position: absolute;
+	bottom:200px;
+	-webkit-animation: fall 1.5s linear infinite;
+  -moz-animation: fall .6s linear infinite;
+}
+
+/* animate the drops*/
+@-webkit-keyframes fall {
+	to {margin-top:900px;}
+}
+@-moz-keyframes fall {
+	to {margin-top:900px;}
+}
+
+
 header {
 	height: 20%;
+}
+
+header a{
+	color: black;
 }
 
 header h1 {
@@ -56,15 +85,6 @@ footer {
 	height: 20%;
 }
 
-#location_search {
-	display: inline-block;
-}
-
-#favorite {
-	margin-left: 50px;
-	display: inline-block;
-}
-
 input, select {
 	font-size: 20px;
     border: 5px solid white; 
@@ -83,15 +103,22 @@ input, select {
 }
 
 #main-forecast {
-	text-align: center;	
+	text-align: center;
+	background-color: rgba(200, 200, 200, 0.2);
+	margin: auto;
+	width: 55%;
+	border-radius: 15px;
+	padding-bottom: 10px;
 }
 
 #main-forecast h1 {
-	display: none;	
+	display: none;
 }
 
-#city, #state {
+#city, #state{
 	display: inline-block;
+	font-size: 20pt;
+
 }
 
 #ten-day-forecast {
@@ -108,10 +135,32 @@ input, select {
 	display: inline-block;
 	width: 160px;
 	background-color: rgba(200, 200, 200, 0.6);
-	margin-bottom: 10px;
+	margin-bottom: 15px;
+	margin-left: 10px;
+	border-radius: 15px;
 }
 
 #favorite_button {
 	text-align: center;
+}
+
+#favorite_button input::-webkit-input-placeholder {
+   color: rgba(0, 0, 0,.5);
+}
+
+#logo a{
+	text-decoration: none;
+	color: black;
+	font-family: 'Niconne', cursive;
+	font-size: 65pt;
+}
+
+.submit_favorite {
+width: 50px; 
+height: 50px; 
+background-color: rgba(215, 44, 44, 0.7);
+border: solid 5px white; 
+border-radius: 50%;
+color: white;
 }
 

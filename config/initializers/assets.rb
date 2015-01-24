@@ -7,6 +7,8 @@ Rails.application.config.assets.precompile += %w( favorites.js )
 
 Rails.application.config.assets.precompile += %w( changeweather.js )
 
+Rails.application.config.assets.precompile += %w( rain.js )
+
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
 

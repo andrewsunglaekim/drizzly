@@ -6,15 +6,16 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Niconne' rel='stylesheet' type='text/css'>
 </head>
 <body>
+<div class='rain'>
 <header>
-	<h1>Drizzly</h1>
+	<h1 id='logo'><%= link_to "Drizz.ly", weather_path %></h1>
 	<% if current_user %>
 	<ul>
 		<li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></l1>
 		<li><%= link_to "Edit account", edit_user_registration_path %></l1>
-		<li><%= link_to "See the weather", weather_path %></li>
 	</ul>
 	<% end %>
 </header>
@@ -26,5 +27,7 @@
 </footer>
 <%= javascript_include_tag 'favorites' %>
 <%= javascript_include_tag 'changeweather' %>
+<%= javascript_include_tag 'rain' %>
+</div>
 </body>
 </html>

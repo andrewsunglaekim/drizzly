@@ -1,6 +1,6 @@
 <section>
 	<div id="location_search">
-		<h4>Search a new location</h4>
+		<h2>Search a new location</h2>
 		<form id="weather_search">
 			<input id="weather_search_city" type="text" placeholder="City">
 			<input id="weather_search_state" type="text" placeholder="State">
@@ -10,7 +10,7 @@
 
 
 	<div id="favorite">
-		<h2>Favorite List</h2>
+		<h2>Choose from Favorites</h2>
 		<select>
 			<%= @favorites.each do |favorite| %>
   		<option name="<%=favorite.id%>" value="<%=favorite.city%>,<%=favorite.state%>" id="favorite<%=favorite.id%>"><%=favorite.name%></option>
@@ -22,6 +22,8 @@
 <section>
 	<div id="main-forecast">
 	<h1>Main Forecast</h1>
+		<div id="pic">
+		</div>
 		<div id="city">
 			<h2></h2>
 		</div>
@@ -87,11 +89,10 @@
 <section>
 	<div id="favorite_button">
 		<%= form_for ([current_user, current_user.favorites.build]) do |f| %>
-		<%= f.label :favorite_name %>
 		<%= f.text_field :name, :placeholder => "Nickname this city..." %>
 		<%= f.hidden_field :city %>
 		<%= f.hidden_field :state %>
-		<%= f.submit %>
+		<%= f.submit "fav", :class => 'submit_favorite' %>
 		<% end %>
 	</div>
 	<p val="<%=current_user.id%>" id="current_user"><p>
