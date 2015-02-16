@@ -1,0 +1,167 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+body {
+	height: 100%;
+	font-family: Verdana, Geneva, sans-serif;
+	width: 70%;
+	margin: auto;
+	background-image: url("https://ununsplash.imgix.net/reserve/D9xlw7UxTBqQw5sLf8cJ_reef%20insp-72.jpg?fit=crop&fm=jpg&h=700&q=75&w=1050");
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+}
+
+.rain{
+
+}
+
+.drop {
+  background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgba(255,255,255,1) ), to(rgba(0,0,0,0.6))  );
+	width:3px;
+	height:75px;
+	position: absolute;
+	bottom:200px;
+	-webkit-animation: fall 1.5s linear infinite;
+  -moz-animation: fall .6s linear infinite;
+}
+
+/* animate the drops*/
+@-webkit-keyframes fall {
+	to {margin-top:900px;}
+}
+@-moz-keyframes fall {
+	to {margin-top:900px;}
+}
+
+
+header {
+	height: 20%;
+}
+
+header a{
+	color: black;
+}
+
+header h1 {
+	display: inline-block;
+	padding-top: 20px;
+	font-size: 40px;
+}
+
+header ul {
+	display: inline-block;
+	float: right;
+	height: 20px;
+	padding-top: 50px;
+}
+
+header ul li {
+	list-style-type: none;
+	float: right;
+	padding-left: 20px;
+}
+
+section {
+	padding-top: 10px;
+}
+
+footer {
+	text-align: center;
+	color: #000;
+	height: 20%;
+}
+
+input, select {
+	font-size: 20px;
+    border: 5px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 2px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+}
+
+#main-forecast {
+	text-align: center;
+	background-color: rgba(200, 200, 200, 0.2);
+	margin: auto;
+	width: 55%;
+	border-radius: 15px;
+	padding-bottom: 10px;
+}
+
+#main-forecast h1 {
+	display: none;
+}
+
+#city, #state{
+	display: inline-block;
+	font-size: 20pt;
+
+}
+
+#ten-day-forecast {
+	text-align: center;
+
+}
+
+#ten-day-forecast li {
+	list-style-type: none;
+}
+
+#ten-day-forecast div {
+	text-align: left;
+	display: inline-block;
+	width: 160px;
+	background-color: rgba(200, 200, 200, 0.6);
+	margin-bottom: 15px;
+	margin-left: 10px;
+	border-radius: 15px;
+}
+
+#favorite_button {
+	text-align: center;
+}
+
+#favorite_button input::-webkit-input-placeholder {
+   color: rgba(0, 0, 0,.5);
+}
+
+#logo a{
+	text-decoration: none;
+	color: black;
+	font-family: 'Niconne', cursive;
+	font-size: 65pt;
+}
+
+.submit_favorite {
+width: 50px; 
+height: 50px; 
+background-color: rgba(215, 44, 44, 0.7);
+border: solid 5px white; 
+border-radius: 50%;
+color: white;
+}
+
