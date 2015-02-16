@@ -1,6 +1,6 @@
 
 function getWeather(city_search,state_search){
-	var url_con_search = "http://api.wunderground.com/api/8eff5076b5830486/geolookup/conditions/q/"+ state_search +"/"+ city_search +".json";
+	var url_con_search = "https://api.wunderground.com/api/8eff5076b5830486/geolookup/conditions/q/"+ state_search +"/"+ city_search +".json";
 	var url_ten_search =  "https://api.wunderground.com/api/8eff5076b5830486/forecast10day/q/"+state_search +"/"+ city_search +".json";
   $.ajax({
   	url: url_con_search,
@@ -50,7 +50,7 @@ function getWeather(city_search,state_search){
 	
 
 $( document ).ready(function() {
-	var url_ip = "http://api.wunderground.com/api/8eff5076b5830486/geolookup/q/autoip.json";
+	var url_ip = "https://api.wunderground.com/api/8eff5076b5830486/geolookup/q/autoip.json";
   $.ajax({
   url: url_ip,
   dataType : "jsonp",
