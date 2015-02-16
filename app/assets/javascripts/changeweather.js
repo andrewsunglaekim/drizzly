@@ -50,6 +50,7 @@ function getWeather(city_search,state_search){
 	
 
 $( document ).ready(function() {
+  alert("js working")
 	var url_ip = "http://api.wunderground.com/api/8eff5076b5830486/geolookup/q/autoip.json";
   $.ajax({
   url: url_ip,
