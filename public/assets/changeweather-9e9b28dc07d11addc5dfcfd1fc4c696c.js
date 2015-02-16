@@ -81,3 +81,4 @@ $("#weather_search").on("submit", function(e){
 	var state = $("#weather_search_state").val()
 	getWeather(city,state);
 })
+;
