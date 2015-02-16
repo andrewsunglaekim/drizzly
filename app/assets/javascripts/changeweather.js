@@ -55,9 +55,7 @@ $( document ).ready(function() {
   url: url_ip,
   dataType : "jsonp",
   success : function(parsed_json) {
-    console.log(parsed_json)
   	var city = parsed_json['location']['city'];
-    alert(city)
   	var state = parsed_json['location']['state'];
   	getWeather(city,state);
   }
